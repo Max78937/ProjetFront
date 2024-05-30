@@ -34,5 +34,5 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_CREDENTIALS }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: 'upload'
-          app_location: '/'  # répertoire racine de l'application
-          output_location: 'build'  # répertoire de sortie de la construction
+          app_location: '/'  # Répertoire racine de l'application
+          output_location: 'build'  # Répertoire de sortie de la construction (ajustez si nécessaire)
