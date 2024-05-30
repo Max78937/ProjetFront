@@ -30,9 +30,11 @@ jobs:
       - name: Build the application
         run: npm run build
 
-      - name: Deploy to Azure Static Web App
-        uses: Azure/static-web-apps-deploy@v1
+      - name: 'Deploy to Azure WebApp'
+        id: deploy-to-webapp
+        uses: azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APP_TOKEN }}
-          app-location: '.' 
-          output-location: 'build'
+          action: "upload"
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_CREDENTIALS }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          app_location: "/"
