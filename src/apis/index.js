@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const BASE_URL = 'http://prod-azuredevops-backend.azurewebsites.net/v1/employee/'
+const BASE_URL = 'https://prod-azuredevops-backend.azurewebsites.net/v1/employee/'
 
 export const getAllEmployees = () => {
     return axios.get(BASE_URL)
